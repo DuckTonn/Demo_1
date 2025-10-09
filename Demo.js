@@ -1,11 +1,10 @@
 const express = require('express');
 const app = express();
-const PORT = 3000;
 
-app.get('/', (req, res) => {
-  res.send('Hello, World!');
+app.get('/', function (req, res) {
+  res.send('Hello World from Node.js via ngrok');
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+const port = 3000;
+app.listen(port);
+console.log(`Server is listening on port ${port}`);
