@@ -1,10 +1,12 @@
-import express from 'express';
+const express = require('express');
 const app = express();
 
-app.get('/', function (req, res) {
-  res.send('Hello World!');
+const PORT = process.env.PORT || 3000;
+
+app.get('/', (_req, res) => {
+  res.send('Hello from Back4App container!');
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT);
-console.log(`Server is listening on port ${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server running on port ${PORT}`);
+});
