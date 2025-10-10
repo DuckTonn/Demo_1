@@ -4,7 +4,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.get('/', (_req, res) => {
-  res.send('Hello from Back4App container!');
+  res.send('Hello world!');
 });
 
 app.listen(PORT, '0.0.0.0', () => {
