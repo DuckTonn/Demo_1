@@ -2,7 +2,7 @@ import express from 'express';
 const app = express();
 
 app.get('/', function (req, res) {
-  res.send('Hello World from Node.js via ngrok');
+  res.send('Hello World!');
 });
 
 const PORT = process.env.PORT || 3000;
